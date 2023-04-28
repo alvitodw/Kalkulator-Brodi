@@ -1,0 +1,10 @@
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\bin\Debug\Kalkulator brodi.exe.config
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\bin\Debug\Kalkulator brodi.exe
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\bin\Debug\Kalkulator brodi.pdb
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator brodi.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator_brodi.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator brodi.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator brodi.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator brodi.exe
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator brodi.pdb
+C:\Users\Lenovo\source\repos\Kalkulator brodi\Kalkulator brodi\obj\Debug\Kalkulator_brodi.History.resources
