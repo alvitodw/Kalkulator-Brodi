@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,153 +12,113 @@ namespace Kalkulator_brodi
 {
     public partial class History : Form
     {
-        public string operationIs { get; set; } = "";
-
+        #region Constructor
         public History()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Properties
+        public string operationIs { get; set; } = "";
         public float number1 { get; set; } = 0;
         public float number2 { get; set; } = 0;
         public float result { get; set; } = 0;
         private bool sudahdihitung;
         private bool bukancombobox;
-        
+        #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        #region Number Button
+        private void buttonnumber_Click(int number)
         {
             if (sudahdihitung)
             {
                 textBox1.Clear();
                 sudahdihitung = false;
             }
-            textBox1.Text += "1";
+            textBox1.Text += number;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buttonnumber_Click(1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="2";
+            buttonnumber_Click(2);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="3";
+            buttonnumber_Click(3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="4";
+            buttonnumber_Click(4);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="5";
+            buttonnumber_Click(5);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="6";
+            buttonnumber_Click(6);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="7";
+            buttonnumber_Click(7);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="8";
+            buttonnumber_Click(8);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="9";
+            buttonnumber_Click(9);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (sudahdihitung)
-            {
-                textBox1.Clear();
-                sudahdihitung = false;
-            }
-            textBox1.Text +="0";
+            buttonnumber_Click(0);
         }
+        #endregion
 
+        #region Operator Button
+        private void operator_Click(string operand)
+        {
+            operationIs += operand;
+            bukancombobox = true;
+            number1 = float.Parse(textBox1.Text);
+            textBox1.Clear();
+        }
         private void plus_Click(object sender, EventArgs e)
         {
-                operationIs += "+";
-            bukancombobox = true;
-                number1 = float.Parse(textBox1.Text);
-                textBox1.Clear();
-
+            operator_Click("+");
         }
 
         private void minus_Click(object sender, EventArgs e)
         {
-                operationIs += "-";
-            bukancombobox = true;
-            number1 = float.Parse(textBox1.Text);
-                textBox1.Clear();
+            operator_Click("-");
         }
 
         private void multiply_Click(object sender, EventArgs e)
         {
-                operationIs += "*";
-            bukancombobox = true;
-            number1 = float.Parse(textBox1.Text);
-                textBox1.Clear();
+            operator_Click("*");
         }
 
         private void divide_Click(object sender, EventArgs e)
         {
-                operationIs += "/";
-            bukancombobox = true;
-            number1 = float.Parse(textBox1.Text);
-                textBox1.Clear();
+            operator_Click("/");
         }
+        #endregion
 
+        #region Equal Button
         private void equal_Click(object sender, EventArgs e)
         {
             number2 = float.Parse(textBox1.Text);
@@ -182,9 +142,10 @@ namespace Kalkulator_brodi
             {
                 operationIs = "";
             }
-            
-        }
+         }
+        #endregion
 
+        #region Reset Button
         private void reset_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
@@ -194,12 +155,9 @@ namespace Kalkulator_brodi
             number2 = (0);
             operationIs = "";
         }
+        #endregion
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        #region Combobox + Operate Button
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -232,9 +190,10 @@ namespace Kalkulator_brodi
         {
                 number1 = float.Parse(textBox1.Text);
                 textBox1.Clear();
-
         }
+        #endregion
 
+        #region Unused
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -249,5 +208,16 @@ namespace Kalkulator_brodi
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
